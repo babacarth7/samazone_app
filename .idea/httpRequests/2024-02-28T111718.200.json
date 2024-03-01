@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "65d74d8b31e7edfb1c065ef0",
+    "name": "Babacar",
+    "email": "babacar@admin.com",
+    "password": "$2a$10$DLZiqkASO9VHRUzO5JJITeG3FIWNOIGTnwIhO5QgoyNgZbkijCpDi",
+    "isAdmin": true,
+    "__v": 0,
+    "createdAt": "2024-02-22T13:35:07.258Z",
+    "updatedAt": "2024-02-22T13:35:07.258Z"
+  },
+  {
+    "_id": "65d74d8b31e7edfb1c065ef1",
+    "name": "Mamadou",
+    "email": "mamadou@email.com",
+    "password": "$2a$10$IoUMQELoA/vLS820ZnsCuO6ls68iFRz9jWgCp9wzPgM47D0dgVTVy",
+    "isAdmin": false,
+    "__v": 0,
+    "createdAt": "2024-02-22T13:35:07.260Z",
+    "updatedAt": "2024-02-22T13:35:07.260Z"
+  },
+  {
+    "_id": "65d7bf30fbc909770af0eff6",
+    "name": "Babacar Thiam",
+    "email": "babacar@example.com",
+    "password": "$2a$10$RJlTqvXRgNVzENzOTBTh8e7n5SJnfa27JAKW86n34QOPxHNMKfyXS",
+    "isAdmin": false,
+    "createdAt": "2024-02-22T21:40:00.032Z",
+    "updatedAt": "2024-02-22T21:40:00.032Z",
+    "__v": 0
+  },
+  {
+    "_id": "65dc809a3240bdfcebb85407",
+    "name": "Babacar",
+    "email": "babacar@google.com",
+    "password": "$2a$10$us0l4xt0FTQ5KRMRLnEMZuToyJhu1jsj3n81OlX7caJsUdAkSc3wS",
+    "isAdmin": false,
+    "createdAt": "2024-02-26T12:14:18.528Z",
+    "updatedAt": "2024-02-26T12:14:18.528Z",
+    "__v": 0
+  },
+  {
+    "_id": "65dc811f3240bdfcebb8540a",
+    "name": "Babacar Thiam",
+    "email": "babacarthiam@email.com",
+    "password": "$2a$10$lek.19UO0LG1QL97ZRhtu.EpvgULJep3vS7AHZPQo5NW4TypOucfy",
+    "isAdmin": false,
+    "createdAt": "2024-02-26T12:16:31.963Z",
+    "updatedAt": "2024-02-26T12:16:31.963Z",
+    "__v": 0
+  }
+]

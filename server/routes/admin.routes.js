@@ -7,9 +7,9 @@ const router = express.Router()
 
 
 
-router.route("/api/admin/summary", authCtrl.requireAdmin).get(adminController.summary);
-router.route("/api/admin/orders").get(adminController.orders);
-router.route("/api/admin/users").get(adminController.users);
-router.route("/api/admin/products").get(adminController.products);
+router.route("/api/admin/summary").get(authCtrl, adminController.summary);
+router.route("/api/admin/orders").get(authCtrl, adminController.orders);
+router.route("/api/admin/users").get(authCtrl, adminController.users);
+router.route("/api/admin/products").get(authCtrl, adminController.products);
 
 module.exports = router;

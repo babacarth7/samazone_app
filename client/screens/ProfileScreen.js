@@ -1,5 +1,11 @@
-import React, {useState, useEffect} from "react";
-import { View, Text, TouchableOpacity, SafeAreaView, Alert } from "react-native";
+import React from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  SafeAreaView,
+  Alert,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
 import axios from "axios";
@@ -10,8 +16,8 @@ export default function ProfileScreen() {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://192.168.1.18:3000/api/auth/logout");
-      Alert.alert("Logout successfully", "You can log in again")
+      await axios.get("http://192.168.1.111:3000/api/auth/logout");
+      Alert.alert("Logout successfully", "You can log in again");
       await AsyncStorage.removeItem("token");
       navigation.replace("Login");
     } catch (error) {
@@ -24,7 +30,7 @@ export default function ProfileScreen() {
     <SafeAreaView
       style={{
         alignItems: "center",
-        justifyContent:"center",
+        justifyContent: "center",
         marginTop: 20,
       }}
     >
@@ -33,7 +39,11 @@ export default function ProfileScreen() {
       </Text>
       <FontAwesome name="user-circle" size={128} color="black" />
       <View style={{ flexDirection: "row", marginTop: 20 }}>
-        <TouchableOpacity onPress={() => navigation.navigate("EditProfile")} style={{ marginRight: 10 }}>
+        {/* Pass user information to EditProfileScreen */}
+        <TouchableOpacity
+          onPress={() => navigation.navigate("EditProfile")}
+          style={{ marginRight: 10 }}
+        >
           <Text style={{ color: "blue" }}>Edit Profile</Text>
         </TouchableOpacity>
         <Text style={{ color: "gray" }}>|</Text>

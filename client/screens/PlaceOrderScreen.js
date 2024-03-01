@@ -32,7 +32,7 @@ export default function PlaceOrderScreen() {
     try {
       setLoading(true);
       const order = {
-        user,
+        user: shippingAddress.fullName,
         orderItems: cartItems,
         shippingAddress,
         paymentMethod,
@@ -43,7 +43,7 @@ export default function PlaceOrderScreen() {
       };
 
       const response = await axios.post(
-        "http://192.168.1.18:3000/api/order",
+        "http://192.168.1.111:3000/api/order",
         order
       );
       console.log(JSON.stringify(response));
@@ -109,7 +109,7 @@ export default function PlaceOrderScreen() {
             }}
           >
             <Image
-              source={{ uri: `http://192.168.1.18:3000/images/${item.image}` }}
+              source={{ uri: `http://192.168.1.111:3000/images/${item.image}` }}
               style={{ width: 80, height: 80, marginRight: 10 }}
             />
             <View style={{ flex: 1 }}>

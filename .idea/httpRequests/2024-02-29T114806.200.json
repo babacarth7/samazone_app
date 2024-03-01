@@ -1,0 +1,857 @@
+[
+  {
+    "shippingAddress": {
+      "fullName": "Mamadou Konte",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65e06d9b1581b0c51a052bcd",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      }
+    ],
+    "paymentMethod": "CashOnDelivery",
+    "itemsPrice": 80,
+    "shippingPrice": 15,
+    "taxPrice": 12,
+    "totalPrice": 107,
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-02-29T11:42:19.482Z",
+    "updatedAt": "2024-02-29T11:42:19.482Z",
+    "__v": 0
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Bb",
+      "address": "Vv",
+      "city": "Vv",
+      "postalCode": "Vv",
+      "country": "Bv"
+    },
+    "_id": "65df3dbebf99f4446196ee86",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "CashOnDelivery",
+    "itemsPrice": 70,
+    "shippingPrice": 15,
+    "taxPrice": 10.5,
+    "totalPrice": 95.5,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-28T14:05:50.753Z",
+    "updatedAt": "2024-02-28T14:24:51.913Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T14:05:53.787Z",
+    "deliveredAt": "2024-02-28T14:24:51.911Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babaacar",
+      "address": "Parcelles ",
+      "city": "Dakar ",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65df1c714b10b2e92f5d22b6",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "CashOnDelivery",
+    "itemsPrice": 70,
+    "shippingPrice": 15,
+    "taxPrice": 10.5,
+    "totalPrice": 95.5,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-28T11:43:45.634Z",
+    "updatedAt": "2024-02-28T13:30:35.408Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T13:07:14.191Z",
+    "deliveredAt": "2024-02-28T13:30:35.406Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Ndorong Ocass",
+      "city": "Kaolack",
+      "postalCode": "12000",
+      "country": "Senegal"
+    },
+    "_id": "65de144e1ea1163954b27079",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      }
+    ],
+    "paymentMethod": "CashOnDelivery",
+    "itemsPrice": 150,
+    "shippingPrice": 15,
+    "taxPrice": 22.5,
+    "totalPrice": 187.5,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T16:56:46.494Z",
+    "updatedAt": "2024-02-28T13:41:39.694Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T13:08:14.966Z",
+    "deliveredAt": "2024-02-28T13:41:39.683Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65de01481ea1163954b26e12",
+    "orderItems": [
+      {
+        "name": "Classic Pants",
+        "quantity": 1,
+        "image": "pants3.jpg",
+        "price": 75,
+        "_id": "65dddd848d831b4cb4f72b2d"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 225,
+    "shippingPrice": 0,
+    "taxPrice": 33.75,
+    "totalPrice": 258.75,
+    "isPaid": true,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T15:35:36.543Z",
+    "updatedAt": "2024-02-28T13:11:03.477Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T13:11:03.475Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65ddfc751ea1163954b26ddd",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 70,
+    "shippingPrice": 15,
+    "taxPrice": 10.5,
+    "totalPrice": 95.5,
+    "isPaid": true,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T15:15:01.837Z",
+    "updatedAt": "2024-02-28T13:20:28.397Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T13:20:28.396Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65ddfa441ea1163954b26dc5",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 70,
+    "shippingPrice": 15,
+    "taxPrice": 10.5,
+    "totalPrice": 95.5,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T15:05:40.819Z",
+    "updatedAt": "2024-02-28T13:47:00.195Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T13:46:46.854Z",
+    "deliveredAt": "2024-02-28T13:47:00.194Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65ddf9e91ea1163954b26dbd",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 70,
+    "shippingPrice": 15,
+    "taxPrice": 10.5,
+    "totalPrice": 95.5,
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T15:04:09.959Z",
+    "updatedAt": "2024-02-27T15:04:09.959Z",
+    "__v": 0
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Sengal"
+    },
+    "_id": "65ddf9ac1ea1163954b26db7",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 70,
+    "shippingPrice": 15,
+    "taxPrice": 10.5,
+    "totalPrice": 95.5,
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T15:03:08.440Z",
+    "updatedAt": "2024-02-27T15:03:08.440Z",
+    "__v": 0
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65ddf94e1ea1163954b26daf",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 70,
+    "shippingPrice": 15,
+    "taxPrice": 10.5,
+    "totalPrice": 95.5,
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T15:01:34.540Z",
+    "updatedAt": "2024-02-27T15:01:34.540Z",
+    "__v": 0
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65ddf1d21ea1163954b26da7",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 70,
+    "shippingPrice": 15,
+    "taxPrice": 10.5,
+    "totalPrice": 95.5,
+    "isPaid": true,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T14:29:38.390Z",
+    "updatedAt": "2024-02-28T14:00:19.128Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T14:00:19.127Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar",
+      "address": "PA",
+      "city": "Dk",
+      "postalCode": "10500",
+      "country": "SN"
+    },
+    "_id": "65ddefa11ea1163954b26d9c",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 2,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Golf Pants",
+        "quantity": 1,
+        "image": "pants1.jpg",
+        "price": 90,
+        "_id": "65dddd848d831b4cb4f72b2b"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 320,
+    "shippingPrice": 0,
+    "taxPrice": 48,
+    "totalPrice": 368,
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T14:20:17.923Z",
+    "updatedAt": "2024-02-27T14:20:17.923Z",
+    "__v": 0
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Bb",
+      "address": "Bb",
+      "city": "Bb",
+      "postalCode": "Bb",
+      "country": "Bb"
+    },
+    "_id": "65ddedf61ea1163954b26d92",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 2,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Golf Pants",
+        "quantity": 1,
+        "image": "pants1.jpg",
+        "price": 90,
+        "_id": "65dddd848d831b4cb4f72b2b"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 320,
+    "shippingPrice": 0,
+    "taxPrice": 48,
+    "totalPrice": 368,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T14:13:10.600Z",
+    "updatedAt": "2024-02-28T14:00:11.361Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T13:56:42.755Z",
+    "deliveredAt": "2024-02-28T14:00:11.359Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Gg",
+      "address": "Gy",
+      "city": "Fg",
+      "postalCode": "Gg",
+      "country": "Gh"
+    },
+    "_id": "65dded3f1ea1163954b26d88",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Golf Pants",
+        "quantity": 1,
+        "image": "pants1.jpg",
+        "price": 90,
+        "_id": "65dddd848d831b4cb4f72b2b"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 240,
+    "shippingPrice": 0,
+    "taxPrice": 36,
+    "totalPrice": 276,
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T14:10:07.936Z",
+    "updatedAt": "2024-02-27T14:10:07.936Z",
+    "__v": 0
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Hh",
+      "address": "Hh",
+      "city": "Gh",
+      "postalCode": "Gg",
+      "country": "Gh"
+    },
+    "_id": "65dded1e1ea1163954b26d7e",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Golf Pants",
+        "quantity": 1,
+        "image": "pants1.jpg",
+        "price": 90,
+        "_id": "65dddd848d831b4cb4f72b2b"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 240,
+    "shippingPrice": 0,
+    "taxPrice": 36,
+    "totalPrice": 276,
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T14:09:34.589Z",
+    "updatedAt": "2024-02-27T14:09:34.589Z",
+    "__v": 0
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Gh",
+      "address": "Gh",
+      "city": "Gg",
+      "postalCode": "Gg",
+      "country": "Gg"
+    },
+    "_id": "65dded0a1ea1163954b26d74",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Golf Pants",
+        "quantity": 1,
+        "image": "pants1.jpg",
+        "price": 90,
+        "_id": "65dddd848d831b4cb4f72b2b"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 240,
+    "shippingPrice": 0,
+    "taxPrice": 36,
+    "totalPrice": 276,
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-02-27T14:09:14.301Z",
+    "updatedAt": "2024-02-27T14:09:14.301Z",
+    "__v": 0
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Bb",
+      "address": "Hh",
+      "city": "Bb",
+      "postalCode": "Bb",
+      "country": "Bb"
+    },
+    "_id": "65ddecb21ea1163954b26d6a",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Golf Pants",
+        "quantity": 1,
+        "image": "pants1.jpg",
+        "price": 90,
+        "_id": "65dddd848d831b4cb4f72b2b"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 240,
+    "shippingPrice": 0,
+    "taxPrice": 36,
+    "totalPrice": 276,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T14:07:46.635Z",
+    "updatedAt": "2024-02-29T11:39:08.486Z",
+    "__v": 0,
+    "paidAt": "2024-02-29T11:39:06.852Z",
+    "deliveredAt": "2024-02-29T11:39:08.484Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65ddec771ea1163954b26d60",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Golf Pants",
+        "quantity": 1,
+        "image": "pants1.jpg",
+        "price": 90,
+        "_id": "65dddd848d831b4cb4f72b2b"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 240,
+    "shippingPrice": 0,
+    "taxPrice": 36,
+    "totalPrice": 276,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T14:06:47.465Z",
+    "updatedAt": "2024-02-29T09:08:05.687Z",
+    "__v": 0,
+    "paidAt": "2024-02-29T09:07:59.750Z",
+    "deliveredAt": "2024-02-29T09:08:05.685Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65dde6ec6e701ad672d9dc6c",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Golf Pants",
+        "quantity": 1,
+        "image": "pants1.jpg",
+        "price": 90,
+        "_id": "65dddd848d831b4cb4f72b2b"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 240,
+    "shippingPrice": 0,
+    "taxPrice": 36,
+    "totalPrice": 276,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T13:43:08.451Z",
+    "updatedAt": "2024-02-28T14:26:58.925Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T14:26:57.208Z",
+    "deliveredAt": "2024-02-28T14:26:58.924Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65dde6986e701ad672d9dc63",
+    "orderItems": [
+      {
+        "name": "Fit Shirt",
+        "quantity": 1,
+        "image": "shirt2.jpg",
+        "price": 80,
+        "_id": "65dddd848d831b4cb4f72b29"
+      },
+      {
+        "name": "Free Shirt",
+        "quantity": 1,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 150,
+    "shippingPrice": 15,
+    "taxPrice": 22.5,
+    "totalPrice": 187.5,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T13:41:44.488Z",
+    "updatedAt": "2024-02-28T14:18:50.665Z",
+    "__v": 0,
+    "deliveredAt": "2024-02-28T14:18:47.012Z",
+    "paidAt": "2024-02-28T14:18:50.664Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65dde6646e701ad672d9dc5b",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 2,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Classic Pants",
+        "quantity": 1,
+        "image": "pants3.jpg",
+        "price": 75,
+        "_id": "65dddd848d831b4cb4f72b2d"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 215,
+    "shippingPrice": 0,
+    "taxPrice": 32.25,
+    "totalPrice": 247.25,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T13:40:52.313Z",
+    "updatedAt": "2024-02-28T14:18:33.096Z",
+    "__v": 0,
+    "deliveredAt": "2024-02-28T14:18:30.543Z",
+    "paidAt": "2024-02-28T14:18:33.093Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65dde4e66e701ad672d9dc55",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 2,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Classic Pants",
+        "quantity": 1,
+        "image": "pants3.jpg",
+        "price": 75,
+        "_id": "65dddd848d831b4cb4f72b2d"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 215,
+    "shippingPrice": 0,
+    "taxPrice": 32.25,
+    "totalPrice": 247.25,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T13:34:30.231Z",
+    "updatedAt": "2024-02-28T14:12:26.187Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T14:10:04.477Z",
+    "deliveredAt": "2024-02-28T14:12:26.186Z"
+  },
+  {
+    "shippingAddress": {
+      "fullName": "Babacar Thiam",
+      "address": "Parcelles Assainies U22",
+      "city": "Dakar",
+      "postalCode": "10500",
+      "country": "Senegal"
+    },
+    "_id": "65dde3dd6e701ad672d9dc4f",
+    "orderItems": [
+      {
+        "name": "Free Shirt",
+        "quantity": 2,
+        "image": "shirt1.jpg",
+        "price": 70,
+        "_id": "65dddd848d831b4cb4f72b28"
+      },
+      {
+        "name": "Classic Pants",
+        "quantity": 1,
+        "image": "pants3.jpg",
+        "price": 75,
+        "_id": "65dddd848d831b4cb4f72b2d"
+      }
+    ],
+    "paymentMethod": "PayPal",
+    "itemsPrice": 215,
+    "shippingPrice": 0,
+    "taxPrice": 32.25,
+    "totalPrice": 247.25,
+    "isPaid": true,
+    "isDelivered": true,
+    "createdAt": "2024-02-27T13:30:05.362Z",
+    "updatedAt": "2024-02-28T14:11:56.598Z",
+    "__v": 0,
+    "paidAt": "2024-02-28T14:10:59.551Z",
+    "deliveredAt": "2024-02-28T14:11:56.597Z"
+  }
+]

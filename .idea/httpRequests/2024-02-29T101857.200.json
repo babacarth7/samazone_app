@@ -1,0 +1,12 @@
+{
+  "ordersCount": 22,
+  "productsCount": 6,
+  "usersCount": 5,
+  "ordersPrice": 0,
+  "salesData": [
+    {
+      "_id": "2024-02",
+      "totalSales": 4531.5
+    }
+  ]
+}

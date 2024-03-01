@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import {
   View,
   Text,
@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -36,8 +37,17 @@ export default function OrderHistoryScreen() {
     const fetchOrders = async () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
-        const { data } = await axios.get("http://192.168.1.18:3000/api/orders");
-        dispatch({ type: "FETCH_SUCCESS", payload: data });
+        const { data } = await axios.get("http://192.168.1.111:3000/api/orders");
+        
+        // Retrieve user's full name from AsyncStorage
+        const fullName = await AsyncStorage.getItem("fullName");
+        
+        // Filter orders based on the user's full name
+        const filteredOrders = data.filter(
+          (order) => order.shippingAddress.fullName === fullName
+        );
+
+        dispatch({ type: "FETCH_SUCCESS", payload: filteredOrders });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
       }

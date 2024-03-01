@@ -19,7 +19,7 @@ export default function RegisterScreen() {
 
     // send a POST  request to the backend API to register the user
     axios
-      .post("http://192.168.1.18:3000/api/auth/register", user)
+      .post("http://192.168.1.111:3000/api/auth/register", user)
       .then((response) => {
         console.log(response);
         Alert.alert(

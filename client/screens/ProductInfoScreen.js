@@ -55,7 +55,7 @@ export default function ProductInfoScreen({ route }) {
           alignSelf: "center",
           marginTop: 55,
         }}
-        source={{ uri: `http://192.168.1.18:3000/images/${product.image}` }}
+        source={{ uri: `http://192.168.1.111:3000/images/${product.image}` }}
       />
       <View style={{ paddingHorizontal: 20, marginTop: 20 }}>
         <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 10 }}>
@@ -89,9 +89,7 @@ export default function ProductInfoScreen({ route }) {
           marginVertical: 20,
         }}
       >
-        <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-          Add to Cart
-        </Text>
+        <Text style={{ fontSize: 16, fontWeight: "bold" }}>Add to Cart</Text>
       </Pressable>
     </ScrollView>
   );

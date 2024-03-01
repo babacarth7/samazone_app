@@ -1,0 +1,99 @@
+GET http://192.168.1.18:3000/api/admin/users
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-29T114818.200.json
+
+###
+
+GET http://192.168.1.18:3000/api/admin/orders
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-29T114806.200.json
+
+###
+
+GET http://192.168.1.18:3000/api/admin/orders
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-29T111328.200.json
+
+###
+
+GET http://192.168.1.18:3000/api/admin/summary
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-29T111318.200.json
+
+###
+
+GET http://192.168.1.18:3000/api/admin/summary
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-29T103951.200.json
+
+###
+
+GET http://192.168.1.18:3000/api/admin/summary
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-29T103546.200.json
+
+###
+
+GET http://localhost:3000/api/admin/summary
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-29T101857.200.json
+
+###
+
+GET http://localhost:3000/api/admin/summary
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-29T093559.200.json
+
+###
+
+GET http://localhost:3000/api/user/65dc811f3240bdfcebb8540a
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-28T112103.200.json
+
+###
+
+GET http://localhost:3000/api/user/65dc811f3240bdfcebb8540a
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-28T111942.404.html
+
+###
+
+GET http://localhost:3000/api/users
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-02-28T111718.200.json
+
+###
+

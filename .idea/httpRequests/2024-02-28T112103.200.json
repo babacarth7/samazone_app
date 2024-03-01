@@ -1,0 +1,10 @@
+{
+  "_id": "65dc811f3240bdfcebb8540a",
+  "name": "Babacar Thiam",
+  "email": "babacarthiam@email.com",
+  "password": "$2a$10$lek.19UO0LG1QL97ZRhtu.EpvgULJep3vS7AHZPQo5NW4TypOucfy",
+  "isAdmin": false,
+  "createdAt": "2024-02-26T12:16:31.963Z",
+  "updatedAt": "2024-02-26T12:16:31.963Z",
+  "__v": 0
+}

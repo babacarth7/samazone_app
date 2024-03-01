@@ -9,7 +9,7 @@ export default function LogoutScreen() {
   const navigation = useNavigation();
   const handleLogout = async () => {
     try {
-      await axios.get("http://192.168.1.18:3000/api/auth/logout");
+      await axios.get("http://192.168.1.111:3000/api/auth/logout");
       Alert.alert("Logout successfully", "You can log in again")
       await AsyncStorage.removeItem("token");
       navigation.replace("Login");

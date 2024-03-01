@@ -49,7 +49,7 @@ export default function ProductItem({ product }) {
           resizeMode: "contain",
           borderRadius: 20,
         }}
-       source={{ uri: `http://192.168.1.18:3000/images/${product.image}` }}
+        source={{ uri: `http://192.168.1.111:3000/images/${product.image}` }}
       />
       <Text
         style={{
