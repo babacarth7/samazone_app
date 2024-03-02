@@ -18,15 +18,15 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 // Middleware
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(
-    session({
-        secret: "secretary",
-        resave: false,
-        saveUninitialized: false,
-        cookie: {secure: false},
-    }),
+  session({
+    secret: "secretary",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false },
+  })
 );
 
 // Routes
@@ -37,33 +37,33 @@ app.use("/", userRoutes);
 app.use("/", adminRoutes);
 
 app.get("/", (req, res) => {
-    res.status(200).json({
-        message: "API Samazone App v1",
-    });
+  res.status(200).json({
+    message: "API Samazone App v1",
+  });
 });
 
 app.get("/api/seed", async (req, res) => {
-    await mongoose.connect(config.db);
-    await Product.deleteMany();
-    await Product.insertMany(data.products);
-    res.send({message: "Seeded successfully"});
+  await mongoose.connect(config.db);
+  await Product.deleteMany();
+  await Product.insertMany(data.products);
+  res.send({ message: "Seeded successfully" });
 });
 
 const startServer = async () => {
-    try {
-        await mongoose.connect(config.db);
-        console.log(`MongoDB connected to ${config.db}`);
+  try {
+    await mongoose.connect(config.db);
+    console.log(`MongoDB connected to ${config.db}`);
 
-        app.listen(config.port, (err) => {
-            if (err) {
-                console.log(err);
-            }
-            console.log(`Server is listening on port: ${config.port}`);
-        });
-    } catch (error) {
-        console.log(error.message);
-        process.exit(1);
-    }
+    app.listen(config.port, (err) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log(`Server is listening on port: ${config.port}`);
+    });
+  } catch (error) {
+    console.log(error.message);
+    process.exit(1);
+  }
 };
 
 startServer().then();

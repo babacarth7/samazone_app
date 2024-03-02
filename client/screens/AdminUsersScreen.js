@@ -81,14 +81,11 @@ export default function AdminUsersScreen() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const token = await AsyncStorage.getItem("token");
-        const { data } = await axios.get(
-          `http://192.168.1.111:3000/api/admin/users`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const { data } = await axios.get(`http://192.168.1.111:3000/api/admin/users`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
@@ -99,9 +96,7 @@ export default function AdminUsersScreen() {
 
   const renderItem = ({ item }) => (
     <View style={{ marginBottom: 10, padding: 20 }}>
-      <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-        User Details
-      </Text>
+      <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>User Details</Text>
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
         <Text style={{ marginRight: 10, fontWeight: "bold" }}>ID:</Text>
         <Text style={{ flex: 1 }}>{item._id}</Text>
@@ -193,20 +188,13 @@ export default function AdminUsersScreen() {
         )}
 
         <View style={{ padding: 10 }}>
-          <Text style={{ fontSize: 20, fontWeight: "bold", marginTop: 20 }}>
-            Admin Users
-          </Text>
-
+          <Text style={{ fontSize: 20, fontWeight: "bold", marginTop: 20 }}>Admin Users</Text>
           {loading ? (
             <ActivityIndicator size="large" color="#0000ff" />
           ) : error ? (
             <Text style={{ color: "red" }}>{error}</Text>
           ) : (
-            <FlatList
-              data={users}
-              renderItem={renderItem}
-              keyExtractor={(item) => item._id}
-            />
+            <FlatList data={users} renderItem={renderItem} keyExtractor={(item) => item._id} />
           )}
         </View>
       </ScrollView>

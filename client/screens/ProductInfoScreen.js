@@ -58,24 +58,14 @@ export default function ProductInfoScreen({ route }) {
         source={{ uri: `http://192.168.1.111:3000/images/${product.image}` }}
       />
       <View style={{ paddingHorizontal: 20, marginTop: 20 }}>
-        <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 10 }}>
-          {product.name}
-        </Text>
-        <Text style={{ fontSize: 18, marginBottom: 5 }}>
-          Category: {product.category}
-        </Text>
-        <Text style={{ fontSize: 18, marginBottom: 5 }}>
-          Brand: {product.brand}
-        </Text>
+        <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 10 }}>{product.name}</Text>
+        <Text style={{ fontSize: 18, marginBottom: 5 }}>Category: {product.category}</Text>
+        <Text style={{ fontSize: 18, marginBottom: 5 }}>Brand: {product.brand}</Text>
         <Text style={{ fontSize: 16, marginBottom: 5 }}>
           Rating: {product.rating} ({product.numReviews} reviews)
         </Text>
-        <Text style={{ fontSize: 16, marginBottom: 5 }}>
-          Description: {product.description}
-        </Text>
-        <Text style={{ fontSize: 16 }}>
-          Status: {product.countInStock > 0 ? "In stock" : "Unavailable"}
-        </Text>
+        <Text style={{ fontSize: 16, marginBottom: 5 }}>Description: {product.description}</Text>
+        <Text style={{ fontSize: 16 }}>Status: {product.countInStock > 0 ? "In stock" : "Unavailable"}</Text>
       </View>
       <Pressable
         onPress={addToCartHandler}

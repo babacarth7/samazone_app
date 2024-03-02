@@ -81,14 +81,11 @@ export default function AdminProductsScreen() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const token = await AsyncStorage.getItem("token");
-        const { data } = await axios.get(
-          `http://192.168.1.111:3000/api/admin/products`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const { data } = await axios.get(`http://192.168.1.111:3000/api/admin/products`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
@@ -119,14 +116,10 @@ export default function AdminProductsScreen() {
         }}
         resizeMode="cover"
       />
-      <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-        {item.name}
-      </Text>
+      <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>{item.name}</Text>
       <Text>Price: ${item.price}</Text>
       <Text>Description: {item.description}</Text>
-      <Text style={{ color: "#008E97", marginTop: 10, fontWeight: "bold" }}>
-        View Details
-      </Text>
+      <Text style={{ color: "#008E97", marginTop: 10, fontWeight: "bold" }}>View Details</Text>
     </TouchableOpacity>
   );
 
@@ -194,20 +187,14 @@ export default function AdminProductsScreen() {
         )}
 
         <View style={{ padding: 10 }}>
-          <Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 10 }}>
-            Admin Products
-          </Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 10 }}>Admin Products</Text>
 
           {loading ? (
             <ActivityIndicator size="large" color="#0000ff" />
           ) : error ? (
             <Text style={{ color: "red" }}>{error}</Text>
           ) : (
-            <FlatList
-              data={products}
-              renderItem={renderItem}
-              keyExtractor={(item) => item._id}
-            />
+            <FlatList data={products} renderItem={renderItem} keyExtractor={(item) => item._id} />
           )}
         </View>
       </ScrollView>

@@ -1,12 +1,5 @@
 import React, { useContext, useState } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  Image,
-  Alert,
-} from "react-native";
+import { View, Text, TouchableOpacity, ScrollView, Image, Alert } from "react-native";
 import { Store } from "../utils/Store";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
@@ -17,9 +10,7 @@ export default function PlaceOrderScreen() {
 
   const round2 = (num) => Math.round(num * 100 + Number.EPSILON) / 100;
 
-  const itemsPrice = round2(
-    cartItems.reduce((a, c) => a + c.quantity * c.price, 0)
-  );
+  const itemsPrice = round2(cartItems.reduce((a, c) => a + c.quantity * c.price, 0));
 
   const shippingPrice = itemsPrice > 200 ? 0 : 15;
   const taxPrice = round2(itemsPrice * 0.15);
@@ -42,10 +33,7 @@ export default function PlaceOrderScreen() {
         totalPrice,
       };
 
-      const response = await axios.post(
-        "http://192.168.1.111:3000/api/order",
-        order
-      );
+      const response = await axios.post("http://192.168.1.111:3000/api/order", order);
       console.log(JSON.stringify(response));
       console.log(JSON.stringify(order));
       const orderIdFromResponse = response.data._id;
@@ -63,15 +51,11 @@ export default function PlaceOrderScreen() {
 
   return (
     <ScrollView style={{ flex: 1, padding: 20, marginTop: 55 }}>
-      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>
-        Place Order
-      </Text>
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>Place Order</Text>
 
       {/* Shipping Address */}
       <View style={{ marginBottom: 20 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-          Shipping Address
-        </Text>
+        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Shipping Address</Text>
         <Text>{shippingAddress.fullName}</Text>
         <Text>{shippingAddress.address}</Text>
         <Text>
@@ -85,9 +69,7 @@ export default function PlaceOrderScreen() {
 
       {/* Payment Method */}
       <View style={{ marginBottom: 20 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-          Payment Method
-        </Text>
+        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Payment Method</Text>
         <Text>{paymentMethod}</Text>
         <TouchableOpacity onPress={() => navigation.navigate("Payment")}>
           <Text style={{ color: "blue", marginTop: 10 }}>Edit</Text>
@@ -96,9 +78,7 @@ export default function PlaceOrderScreen() {
 
       {/* Order Items */}
       <View style={{ marginBottom: 20 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-          Order Items
-        </Text>
+        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Order Items</Text>
         {cartItems.map((item) => (
           <View
             key={item.slug}
@@ -113,9 +93,7 @@ export default function PlaceOrderScreen() {
               style={{ width: 80, height: 80, marginRight: 10 }}
             />
             <View style={{ flex: 1 }}>
-              <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-                {item.name}
-              </Text>
+              <Text style={{ fontSize: 16, fontWeight: "bold" }}>{item.name}</Text>
               <Text style={{ fontSize: 14 }}>Price: ${item.price}</Text>
               <Text style={{ fontSize: 14 }}>Quantity: {item.quantity}</Text>
             </View>
@@ -125,13 +103,8 @@ export default function PlaceOrderScreen() {
 
       {/* Order Summary */}
       <View style={{ marginBottom: 20 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-          Order Summary
-        </Text>
-        <Text>
-          Subtotal: $
-          {cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0)}
-        </Text>
+        <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Order Summary</Text>
+        <Text>Subtotal: ${cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0)}</Text>
         {/* Add more summary details like tax, shipping, etc. */}
       </View>
 

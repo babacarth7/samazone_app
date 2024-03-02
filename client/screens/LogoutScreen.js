@@ -10,7 +10,7 @@ export default function LogoutScreen() {
   const handleLogout = async () => {
     try {
       await axios.get("http://192.168.1.111:3000/api/auth/logout");
-      Alert.alert("Logout successfully", "You can log in again")
+      Alert.alert("Logout successfully", "You can log in again");
       await AsyncStorage.removeItem("token");
       navigation.replace("Login");
     } catch (error) {
@@ -19,11 +19,9 @@ export default function LogoutScreen() {
     }
   };
 
-
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Button title="Logout" onPress={handleLogout} />
     </View>
   );
-};
-
+}

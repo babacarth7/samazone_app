@@ -1,13 +1,5 @@
 import React, { useReducer, useEffect, useState } from "react";
-import {
-  Platform,
-  Pressable,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  View,
-  Button,
-} from "react-native";
+import { Platform, Pressable, SafeAreaView, ScrollView, Text, View, Button } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
@@ -63,14 +55,11 @@ export default function AdminDashboardScreen() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const token = await AsyncStorage.getItem("token");
-        const response = await axios.get(
-          `http://192.168.1.111:3000/api/admin/summary`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await axios.get(`http://192.168.1.111:3000/api/admin/summary`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         dispatch({ type: "FETCH_SUCCESS", payload: response.data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err });
@@ -277,11 +266,7 @@ export default function AdminDashboardScreen() {
                 flexBasis: "48%",
               }}
             >
-              <Text
-                style={{ fontSize: 24, fontWeight: "bold", marginBottom: 5 }}
-              >
-                {summary?.usersCount}
-              </Text>
+              <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 5 }}>{summary?.usersCount}</Text>
               <Text>Users</Text>
             </View>
           </View>

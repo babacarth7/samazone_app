@@ -22,20 +22,14 @@ export default function RegisterScreen() {
       .post("http://192.168.1.111:3000/api/auth/register", user)
       .then((response) => {
         console.log(response);
-        Alert.alert(
-          "Registration successful",
-          "You have been registered Successfully",
-        );
+        Alert.alert("Registration successful", "You have been registered Successfully");
         setName("");
         setEmail("");
         setPassword("");
         navigation.navigate("Login");
       })
       .catch((error) => {
-        Alert.alert(
-          "Registration Error",
-          "An error occurred while registering",
-        );
+        Alert.alert("Registration Error", "An error occurred while registering");
         console.log("registration failed", error);
       });
   };
@@ -49,9 +43,7 @@ export default function RegisterScreen() {
         padding: 20,
       }}
     >
-      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>
-        Register
-      </Text>
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>Register</Text>
 
       <View style={{ marginBottom: 10, width: "100%" }}>
         <TextInput
@@ -121,10 +113,7 @@ export default function RegisterScreen() {
         </Text>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Login")}
-        style={{ marginTop: 20 }}
-      >
+      <TouchableOpacity onPress={() => navigation.navigate("Login")} style={{ marginTop: 20 }}>
         <Text style={{ color: "blue" }}>Already have an account? Login</Text>
       </TouchableOpacity>
     </View>

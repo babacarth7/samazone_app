@@ -1,12 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
-import {
-  View,
-  Text,
-  ActivityIndicator,
-  FlatList,
-  ScrollView,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, ActivityIndicator, FlatList, ScrollView, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -38,14 +31,12 @@ export default function OrderHistoryScreen() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const { data } = await axios.get("http://192.168.1.111:3000/api/orders");
-        
+
         // Retrieve user's full name from AsyncStorage
         const fullName = await AsyncStorage.getItem("fullName");
-        
+
         // Filter orders based on the user's full name
-        const filteredOrders = data.filter(
-          (order) => order.shippingAddress.fullName === fullName
-        );
+        const filteredOrders = data.filter((order) => order.shippingAddress.fullName === fullName);
 
         dispatch({ type: "FETCH_SUCCESS", payload: filteredOrders });
       } catch (err) {
@@ -57,9 +48,7 @@ export default function OrderHistoryScreen() {
 
   const renderItem = ({ item }) => (
     <View style={{ marginBottom: 10, padding: 20 }}>
-      <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-        Order Details
-      </Text>
+      <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Order Details</Text>
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
         <Text style={{ marginRight: 10, fontWeight: "bold" }}>ID:</Text>
         <Text style={{ flex: 1 }}>{item._id.substring(20, 24)}</Text>
@@ -69,24 +58,16 @@ export default function OrderHistoryScreen() {
         <Text style={{ flex: 1 }}>{item.createdAt.substring(0, 10)}</Text>
       </View>
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
-        <Text style={{ marginRight: 10, fontWeight: "bold" }}>
-          Total Price:
-        </Text>
+        <Text style={{ marginRight: 10, fontWeight: "bold" }}>Total Price:</Text>
         <Text style={{ flex: 1 }}>${item.totalPrice}</Text>
       </View>
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
         <Text style={{ marginRight: 10, fontWeight: "bold" }}>Paid:</Text>
-        <Text style={{ flex: 1 }}>
-          {item.isPaid ? item.paidAt.substring(0, 10) : "Not paid"}
-        </Text>
+        <Text style={{ flex: 1 }}>{item.isPaid ? item.paidAt.substring(0, 10) : "Not paid"}</Text>
       </View>
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
         <Text style={{ marginRight: 10, fontWeight: "bold" }}>Delivered:</Text>
-        <Text style={{ flex: 1 }}>
-          {item.isDelivered
-            ? item.deliveredAt.substring(0, 10)
-            : "Not delivered"}
-        </Text>
+        <Text style={{ flex: 1 }}>{item.isDelivered ? item.deliveredAt.substring(0, 10) : "Not delivered"}</Text>
       </View>
       <TouchableOpacity
         style={{
@@ -96,9 +77,7 @@ export default function OrderHistoryScreen() {
           alignItems: "center",
           marginTop: 10,
         }}
-        onPress={() =>
-          navigation.navigate("OrderConfirmation", { orderId: item._id })
-        }
+        onPress={() => navigation.navigate("OrderConfirmation", { orderId: item._id })}
       >
         <Text style={{ fontSize: 14, fontWeight: "bold" }}>Detail</Text>
       </TouchableOpacity>
@@ -108,11 +87,7 @@ export default function OrderHistoryScreen() {
   return (
     <ScrollView style={{ flex: 1, marginTop: 55 }}>
       {loading ? (
-        <ActivityIndicator
-          size="large"
-          color="#0000ff"
-          style={{ marginTop: 20 }}
-        />
+        <ActivityIndicator size="large" color="#0000ff" style={{ marginTop: 20 }} />
       ) : error ? (
         <Text
           style={{
@@ -125,11 +100,7 @@ export default function OrderHistoryScreen() {
           Error: {error}
         </Text>
       ) : (
-        <FlatList
-          data={orders}
-          keyExtractor={(item) => item._id}
-          renderItem={renderItem}
-        />
+        <FlatList data={orders} keyExtractor={(item) => item._id} renderItem={renderItem} />
       )}
     </ScrollView>
   );

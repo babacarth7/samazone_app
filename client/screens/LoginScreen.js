@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Alert,
-  ActivityIndicator,
-} from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Alert, ActivityIndicator } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -40,10 +33,7 @@ export default function LoginScreen() {
         password: password,
       };
 
-      const response = await axios.post(
-        "http://192.168.1.111:3000/api/auth/login",
-        user
-      );
+      const response = await axios.post("http://192.168.1.111:3000/api/auth/login", user);
       const { token, isAdmin } = response.data;
 
       await AsyncStorage.setItem("token", token);
@@ -59,16 +49,10 @@ export default function LoginScreen() {
         if (error.response.status === 401) {
           Alert.alert("Login Error", "Invalid Email or Password");
         } else {
-          Alert.alert(
-            "Login Error",
-            "An error occurred. Please try again later."
-          );
+          Alert.alert("Login Error", "An error occurred. Please try again later.");
         }
       } else if (error.request) {
-        Alert.alert(
-          "Network Error",
-          "Could not connect to the server. Please check your internet connection."
-        );
+        Alert.alert("Network Error", "Could not connect to the server. Please check your internet connection.");
       } else {
         Alert.alert("Error", "An unexpected error occurred.");
       }
@@ -87,9 +71,7 @@ export default function LoginScreen() {
         padding: 20,
       }}
     >
-      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>
-        Login
-      </Text>
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>Login</Text>
       <View style={{ marginBottom: 10, width: "100%" }}>
         <TextInput
           value={email}
@@ -150,10 +132,7 @@ export default function LoginScreen() {
         )}
       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Register")}
-        style={{ marginTop: 20 }}
-      >
+      <TouchableOpacity onPress={() => navigation.navigate("Register")} style={{ marginTop: 20 }}>
         <Text style={{ color: "blue" }}>Don't have an account? Register</Text>
       </TouchableOpacity>
     </View>

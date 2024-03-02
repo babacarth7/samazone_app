@@ -5,11 +5,7 @@ const config = {
   db:
     process.env.MONGODB_URI ||
     process.env.MONGODB_HOST ||
-    "mongodb://" +
-      (process.env.IP || "localhost") +
-      ":" +
-      (process.env.MONGODB_PORT || "27017") +
-      "/samazonemobile",
+    "mongodb://" + (process.env.IP || "localhost") + ":" + (process.env.MONGODB_PORT || "27017") + "/samazonemobile",
 };
 
 module.exports = config;

@@ -1,12 +1,5 @@
 import React, { useContext } from "react";
-import {
-  ScrollView,
-  View,
-  Text,
-  TouchableOpacity,
-  Alert,
-  Image,
-} from "react-native";
+import { ScrollView, View, Text, TouchableOpacity, Alert, Image } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { Store } from "../utils/Store";
 import { useNavigation } from "@react-navigation/native";
@@ -63,19 +56,12 @@ export default function CartScreen() {
                 style={{ width: 80, height: 80, marginRight: 10 }}
               />
               <View style={{ flex: 1, marginBottom: 20 }}>
-                <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-                  {item.name}
-                </Text>
+                <Text style={{ fontSize: 16, fontWeight: "bold" }}>{item.name}</Text>
                 <Text style={{ fontSize: 14 }}>Price: ${item.price}</Text>
                 <Text style={{ fontSize: 14 }}>Quantity: {item.quantity}</Text>
               </View>
               <TouchableOpacity onPress={() => removeItemHandler(item)}>
-                <AntDesign
-                  name="close"
-                  size={24}
-                  color="black"
-                  style={{ marginLeft: 10 }}
-                />
+                <AntDesign name="close" size={24} color="black" style={{ marginLeft: 10 }} />
               </TouchableOpacity>
             </View>
           ))}
@@ -87,9 +73,7 @@ export default function CartScreen() {
               paddingTop: 10,
             }}
           >
-            <Text
-              style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}
-            >
+            <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
               Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}): $
               {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
             </Text>
@@ -102,9 +86,7 @@ export default function CartScreen() {
               }}
               onPress={() => navigation.navigate("Shipping")}
             >
-              <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-                Check Out
-              </Text>
+              <Text style={{ fontSize: 16, fontWeight: "bold" }}>Check Out</Text>
             </TouchableOpacity>
           </View>
         </>

@@ -1,13 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  ActivityIndicator,
-  Image,
-  TouchableOpacity,
-  Alert,
-} from "react-native";
+import { View, Text, ScrollView, ActivityIndicator, Image, TouchableOpacity, Alert } from "react-native";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -52,12 +44,11 @@ export default function OrderConfirmationScreen({ route }) {
   const [isAdmin, setIsAdmin] = useState(false);
   const { orderId } = route.params;
 
-  const [{ loading, error, order, successPay, successDeliver }, dispatch] =
-    useReducer(reducer, {
-      loading: true,
-      order: {},
-      error: "",
-    });
+  const [{ loading, error, order, successPay, successDeliver }, dispatch] = useReducer(reducer, {
+    loading: true,
+    order: {},
+    error: "",
+  });
 
   useEffect(() => {
     const checkAdminStatus = async () => {
@@ -76,14 +67,11 @@ export default function OrderConfirmationScreen({ route }) {
     try {
       dispatch({ type: "FETCH_REQUEST" });
       const token = await AsyncStorage.getItem("token");
-      const { data } = await axios.get(
-        `http://192.168.1.111:3000/api/order/${orderId}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const { data } = await axios.get(`http://192.168.1.111:3000/api/order/${orderId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       dispatch({ type: "FETCH_SUCCESS", payload: data });
     } catch (err) {
       dispatch({ type: "FETCH_FAIL", payload: err });
@@ -97,9 +85,7 @@ export default function OrderConfirmationScreen({ route }) {
   const handlePay = async () => {
     try {
       dispatch({ type: "PAY_REQUEST" });
-      const { data } = await axios.put(
-        `http://192.168.1.111:3000/api/order/${orderId}/pay`
-      );
+      const { data } = await axios.put(`http://192.168.1.111:3000/api/order/${orderId}/pay`);
       dispatch({ type: "PAY_SUCCESS", payload: data });
       Alert.alert("Order(s) Paid", "order(s) paid successfully");
       await fetchOrder();
@@ -113,9 +99,7 @@ export default function OrderConfirmationScreen({ route }) {
   const handleDeliver = async () => {
     try {
       dispatch({ type: "DELIVER_REQUEST" });
-      const { data } = await axios.put(
-        `http://192.168.1.111:3000/api/order/${orderId}/deliver`
-      );
+      const { data } = await axios.put(`http://192.168.1.111:3000/api/order/${orderId}/deliver`);
       dispatch({ type: "DELIVER_SUCCESS", payload: data });
       Alert.alert("Order(s) Delivered", "order(s) delivered successfully");
       await fetchOrder();
@@ -142,11 +126,7 @@ export default function OrderConfirmationScreen({ route }) {
   return (
     <ScrollView style={{ flex: 1, marginTop: 55 }}>
       {loading ? (
-        <ActivityIndicator
-          size="large"
-          color="#0000ff"
-          style={{ marginTop: 20 }}
-        />
+        <ActivityIndicator size="large" color="#0000ff" style={{ marginTop: 20 }} />
       ) : error ? (
         <View
           style={{
@@ -174,11 +154,7 @@ export default function OrderConfirmationScreen({ route }) {
           {/* Shipping Address and Payment Method */}
           <View style={{ marginBottom: 20, flexDirection: "row", gap: 50 }}>
             <View style={{ flex: 1 }}>
-              <Text
-                style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}
-              >
-                Shipping Address
-              </Text>
+              <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Shipping Address</Text>
               <Text>{shippingAddress.fullName}</Text>
               <Text>{shippingAddress.address}</Text>
               <Text>
@@ -186,32 +162,20 @@ export default function OrderConfirmationScreen({ route }) {
               </Text>
               <Text>{shippingAddress.country}</Text>
               <Text style={{ fontWeight: "bold" }}>
-                {isDelivered
-                  ? `Delivered at ${deliveredAt.substring(0, 10)}`
-                  : "Not delivered"}
+                {isDelivered ? `Delivered at ${deliveredAt.substring(0, 10)}` : "Not delivered"}
               </Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text
-                style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}
-              >
-                Payment Method
-              </Text>
+              <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Payment Method</Text>
               <Text>{paymentMethod}</Text>
-              <Text style={{ fontWeight: "bold" }}>
-                {isPaid ? `Paid at ${paidAt.substring(0, 10)}` : "Not paid"}
-              </Text>
+              <Text style={{ fontWeight: "bold" }}>{isPaid ? `Paid at ${paidAt.substring(0, 10)}` : "Not paid"}</Text>
             </View>
           </View>
 
           {/* Order Items and Order Summary */}
           <View style={{ marginBottom: 20, flexDirection: "row", gap: 50 }}>
             <View style={{ flex: 1 }}>
-              <Text
-                style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}
-              >
-                Order Items
-              </Text>
+              <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Order Items</Text>
               {orderItems.map((item) => (
                 <View
                   key={item._id}
@@ -228,23 +192,15 @@ export default function OrderConfirmationScreen({ route }) {
                     style={{ width: 80, height: 80, marginRight: 10 }}
                   />
                   <View style={{ flex: 1 }}>
-                    <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-                      {item.name}
-                    </Text>
+                    <Text style={{ fontSize: 16, fontWeight: "bold" }}>{item.name}</Text>
                     <Text style={{ fontSize: 14 }}>Price: ${item.price}</Text>
-                    <Text style={{ fontSize: 14 }}>
-                      Quantity: {item.quantity}
-                    </Text>
+                    <Text style={{ fontSize: 14 }}>Quantity: {item.quantity}</Text>
                   </View>
                 </View>
               ))}
             </View>
             <View style={{ flex: 1 }}>
-              <Text
-                style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}
-              >
-                Order Summary
-              </Text>
+              <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Order Summary</Text>
               <Text>Items: ${itemsPrice}</Text>
               <Text>Tax: ${taxPrice}</Text>
               <Text>Shipping: ${shippingPrice}</Text>

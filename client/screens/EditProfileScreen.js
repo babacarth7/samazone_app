@@ -11,9 +11,7 @@ export default function EditProfileScreen() {
         padding: 20,
       }}
     >
-      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>
-        Update Profile
-      </Text>
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>Update Profile</Text>
       <View style={{ marginBottom: 10, width: "100%" }}>
         <TextInput
           placeholder="Enter name"

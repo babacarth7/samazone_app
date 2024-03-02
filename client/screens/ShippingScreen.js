@@ -12,9 +12,7 @@ export default function ShippingScreen() {
   const [fullName, setFullName] = useState(shippingAddress?.fullName || "");
   const [address, setAddress] = useState(shippingAddress?.address || "");
   const [city, setCity] = useState(shippingAddress?.city || "");
-  const [postalCode, setPostalCode] = useState(
-    shippingAddress?.postalCode || ""
-  );
+  const [postalCode, setPostalCode] = useState(shippingAddress?.postalCode || "");
   const [country, setCountry] = useState(shippingAddress?.country || "");
 
   const navigation = useNavigation();
@@ -45,7 +43,7 @@ export default function ShippingScreen() {
     } catch (error) {
       console.error("Error saving fullName to AsyncStorage:", error);
     }
-    
+
     dispatch({ type: "SAVE_SHIPPING_ADDRESS", payload: updatedAddress });
     navigation.navigate("Payment");
   };
@@ -59,9 +57,7 @@ export default function ShippingScreen() {
         padding: 20,
       }}
     >
-      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>
-        Shipping Address
-      </Text>
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>Shipping Address</Text>
       <TextInput
         placeholder="Full Name"
         style={{
@@ -152,14 +148,9 @@ export default function ShippingScreen() {
           marginTop: 20,
         }}
       >
-        <Text style={{ textAlign: "center", fontSize: 16, fontWeight: "bold" }}>
-          Next
-        </Text>
+        <Text style={{ textAlign: "center", fontSize: 16, fontWeight: "bold" }}>Next</Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Cart")}
-        style={{ marginTop: 20 }}
-      >
+      <TouchableOpacity onPress={() => navigation.navigate("Cart")} style={{ marginTop: 20 }}>
         <Text style={{ color: "blue" }}>Go Back</Text>
       </TouchableOpacity>
     </View>

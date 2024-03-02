@@ -56,14 +56,11 @@ export default function AdminOrdersScreen() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const token = await AsyncStorage.getItem("token");
-        const { data } = await axios.get(
-          `http://192.168.1.111:3000/api/admin/orders`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const { data } = await axios.get(`http://192.168.1.111:3000/api/admin/orders`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err });
@@ -99,9 +96,7 @@ export default function AdminOrdersScreen() {
 
   const renderItem = ({ item }) => (
     <View style={{ marginBottom: 10, padding: 20 }}>
-      <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-        Order Details
-      </Text>
+      <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Order Details</Text>
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
         <Text style={{ marginRight: 10, fontWeight: "bold" }}>ID:</Text>
         <Text style={{ flex: 1 }}>{item._id.substring(20, 24)}</Text>
@@ -120,17 +115,11 @@ export default function AdminOrdersScreen() {
       </View>
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
         <Text style={{ marginRight: 10, fontWeight: "bold" }}>PAID:</Text>
-        <Text style={{ flex: 1 }}>
-          {item.isPaid ? item.paidAt.substring(0, 10) : "Not paid"}
-        </Text>
+        <Text style={{ flex: 1 }}>{item.isPaid ? item.paidAt.substring(0, 10) : "Not paid"}</Text>
       </View>
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
         <Text style={{ marginRight: 10, fontWeight: "bold" }}>DELIVERED:</Text>
-        <Text style={{ flex: 1 }}>
-          {item.isDelivered
-            ? item.deliveredAt.substring(0, 10)
-            : "Not delivered"}
-        </Text>
+        <Text style={{ flex: 1 }}>{item.isDelivered ? item.deliveredAt.substring(0, 10) : "Not delivered"}</Text>
       </View>
       <TouchableOpacity
         style={{
@@ -140,9 +129,7 @@ export default function AdminOrdersScreen() {
           alignItems: "center",
           marginTop: 10,
         }}
-        onPress={() =>
-          navigation.navigate("OrderConfirmation", { orderId: item._id })
-        }
+        onPress={() => navigation.navigate("OrderConfirmation", { orderId: item._id })}
       >
         <Text style={{ fontSize: 14, fontWeight: "bold" }}>Detail</Text>
       </TouchableOpacity>
@@ -213,20 +200,14 @@ export default function AdminOrdersScreen() {
         )}
 
         <View style={{ padding: 10 }}>
-          <Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 10 }}>
-            Admin Orders
-          </Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 10 }}>Admin Orders</Text>
 
           {loading ? (
             <ActivityIndicator size="large" color="#0000ff" />
           ) : error ? (
             <Text style={{ color: "red" }}>{error.message}</Text>
           ) : (
-            <FlatList
-              data={orders}
-              renderItem={renderItem}
-              keyExtractor={(item) => item._id}
-            />
+            <FlatList data={orders} renderItem={renderItem} keyExtractor={(item) => item._id} />
           )}
         </View>
       </ScrollView>

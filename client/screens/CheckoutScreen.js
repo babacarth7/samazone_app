@@ -13,9 +13,7 @@ export default function CheckoutScreen() {
         padding: 20,
       }}
     >
-      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>
-        Shipping Address
-      </Text>
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>Shipping Address</Text>
       <View style={{ marginBottom: 10, width: "100%" }}>
         <TextInput
           placeholder="Full Name"
@@ -116,10 +114,7 @@ export default function CheckoutScreen() {
         </Text>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Cart")}
-        style={{ marginTop: 20 }}
-      >
+      <TouchableOpacity onPress={() => navigation.navigate("Cart")} style={{ marginTop: 20 }}>
         <Text style={{ color: "blue" }}>Go Back</Text>
       </TouchableOpacity>
     </View>

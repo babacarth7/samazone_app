@@ -30,13 +30,9 @@ const login = async (req, res) => {
     if (!isValidPassword) {
       return res.status(401).json({ message: "Invalid password" });
     }
-    const token = jwt.sign(
-      { userId: user._id, isAdmin: user.isAdmin },
-      "mysecreykey",
-      {
-        expiresIn: "1h",
-      }
-    );
+    const token = jwt.sign({ userId: user._id, isAdmin: user.isAdmin }, "mysecreykey", {
+      expiresIn: "1h",
+    });
     res.status(200).json({ message: "Login successfully", token, isAdmin: user.isAdmin });
   } catch (error) {
     console.error("Error during login:", error);
@@ -63,16 +59,12 @@ const logout = async (req, res) => {
 const requireAdmin = (req, res, next) => {
   const token = req.headers.authorization;
   if (!token) {
-    return res
-      .status(401)
-      .json({ message: "Access denied. No token provided" });
+    return res.status(401).json({ message: "Access denied. No token provided" });
   }
   try {
     const decoded = jwt.verify(token, "mysecreykey");
     if (!decoded.isAdmin) {
-      return res
-        .status(403)
-        .json({ message: "Access denied. Admin rights required" });
+      return res.status(403).json({ message: "Access denied. Admin rights required" });
     }
     req.user = decoded;
     next();

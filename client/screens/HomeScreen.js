@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Platform,
-  Pressable,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  View,
-} from "react-native";
+import { Platform, Pressable, SafeAreaView, ScrollView, Text, View } from "react-native";
 import ProductItem from "../components/ProductItem";
 import { useNavigation } from "@react-navigation/native";
 import { SliderBox } from "react-native-image-slider-box";
@@ -16,10 +9,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
-  const images = [
-    require("../assets/banner1.jpg"),
-    require("../assets/banner2.jpg"),
-  ];
+  const images = [require("../assets/banner1.jpg"), require("../assets/banner2.jpg")];
   const [showDropdown, setShowDropdown] = useState(false);
   const [products, setProducts] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -27,9 +17,7 @@ export default function HomeScreen() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(
-          "http://192.168.1.111:3000/api/products"
-        );
+        const response = await axios.get("http://192.168.1.111:3000/api/products");
         console.log("Products:", JSON.stringify(response.data));
         setProducts(response.data);
       } catch (error) {
@@ -184,10 +172,7 @@ export default function HomeScreen() {
           }}
         >
           {products.map((product) => (
-            <Pressable
-              key={product.slug}
-              onPress={() => navigation.navigate("Info", { product })}
-            >
+            <Pressable key={product.slug} onPress={() => navigation.navigate("Info", { product })}>
               <ProductItem product={product}></ProductItem>
             </Pressable>
           ))}

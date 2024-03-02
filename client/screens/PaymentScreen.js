@@ -34,9 +34,7 @@ export default function PaymentMethodScreen() {
         padding: 20,
       }}
     >
-      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>
-        Payment Method
-      </Text>
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>Payment Method</Text>
       {["PayPal", "Stripe", "CashOnDelivery"].map((payment) => (
         <TouchableOpacity
           key={payment}
@@ -52,8 +50,7 @@ export default function PaymentMethodScreen() {
               width: 24,
               height: 24,
               borderWidth: 1,
-              borderColor:
-                selectedPaymentMethod === payment ? "#5A67D8" : "#ccc",
+              borderColor: selectedPaymentMethod === payment ? "#5A67D8" : "#ccc",
               borderRadius: 12,
               marginRight: 10,
               justifyContent: "center",
@@ -81,10 +78,7 @@ export default function PaymentMethodScreen() {
           width: "100%",
         }}
       >
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Shipping")}
-          style={{ flex: 1, marginRight: 10 }}
-        >
+        <TouchableOpacity onPress={() => navigation.navigate("Shipping")} style={{ flex: 1, marginRight: 10 }}>
           <Text
             style={{
               fontSize: 16,
@@ -98,10 +92,7 @@ export default function PaymentMethodScreen() {
             Back
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={submitHandler}
-          style={{ flex: 1, marginLeft: 10 }}
-        >
+        <TouchableOpacity onPress={submitHandler} style={{ flex: 1, marginLeft: 10 }}>
           <Text
             style={{
               fontSize: 16,
