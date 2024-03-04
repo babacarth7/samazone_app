@@ -3,6 +3,7 @@ import { View, Text, ActivityIndicator, FlatList, ScrollView, TouchableOpacity }
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { API_URL } from "../utils/config";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -30,7 +31,7 @@ export default function OrderHistoryScreen() {
     const fetchOrders = async () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
-        const { data } = await axios.get("http://192.168.1.111:3000/api/orders");
+        const { data } = await axios.get(`http://${API_URL}/api/orders`);
 
         // Retrieve user's full name from AsyncStorage
         const fullName = await AsyncStorage.getItem("fullName");

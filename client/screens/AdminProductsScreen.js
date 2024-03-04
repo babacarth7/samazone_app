@@ -15,6 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import { FontAwesome5 } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { API_URL } from "../utils/config";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -81,7 +82,7 @@ export default function AdminProductsScreen() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const token = await AsyncStorage.getItem("token");
-        const { data } = await axios.get(`http://192.168.1.111:3000/api/admin/products`, {
+        const { data } = await axios.get(`http://${API_URL}/api/admin/products`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -107,7 +108,7 @@ export default function AdminProductsScreen() {
       }}
     >
       <Image
-        source={{ uri: `http://192.168.1.111:3000/images/${item.image}` }}
+        source={{ uri: `http://${API_URL}/images/${item.image}` }}
         style={{
           width: "100%",
           height: 200,

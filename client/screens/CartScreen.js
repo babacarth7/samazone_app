@@ -3,6 +3,7 @@ import { ScrollView, View, Text, TouchableOpacity, Alert, Image } from "react-na
 import { AntDesign } from "@expo/vector-icons";
 import { Store } from "../utils/Store";
 import { useNavigation } from "@react-navigation/native";
+import { API_URL } from "../utils/config";
 export default function CartScreen() {
   const { state, dispatch } = useContext(Store);
   const { cartItems } = state.cart;
@@ -51,7 +52,7 @@ export default function CartScreen() {
             >
               <Image
                 source={{
-                  uri: `http://192.168.1.111:3000/images/${item.image}`,
+                  uri: `http://${API_URL}/images/${item.image}`,
                 }}
                 style={{ width: 80, height: 80, marginRight: 10 }}
               />

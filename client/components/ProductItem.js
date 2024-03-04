@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { View, Text, Image, StyleSheet, Pressable, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Store } from "../utils/Store";
+import { API_URL } from "../utils/config";
 
 export default function ProductItem({ product }) {
   const { state, dispatch } = useContext(Store);
@@ -49,7 +50,7 @@ export default function ProductItem({ product }) {
           resizeMode: "contain",
           borderRadius: 20,
         }}
-        source={{ uri: `http://192.168.1.111:3000/images/${product.image}` }}
+        source={{ uri: `http://${API_URL}/images/${product.image}` }}
       />
       <Text
         style={{

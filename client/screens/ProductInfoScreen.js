@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { ScrollView, View, Text, Image, Pressable, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Store } from "../utils/Store";
+import { API_URL } from "../utils/config";
 
 export default function ProductInfoScreen({ route }) {
   const { state, dispatch } = useContext(Store);
@@ -55,7 +56,7 @@ export default function ProductInfoScreen({ route }) {
           alignSelf: "center",
           marginTop: 55,
         }}
-        source={{ uri: `http://192.168.1.111:3000/images/${product.image}` }}
+        source={{ uri: `http://${API_URL}/images/${product.image}` }}
       />
       <View style={{ paddingHorizontal: 20, marginTop: 20 }}>
         <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 10 }}>{product.name}</Text>

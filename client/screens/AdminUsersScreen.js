@@ -14,6 +14,7 @@ import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import { FontAwesome5 } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { API_URL } from "../utils/config";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -81,7 +82,7 @@ export default function AdminUsersScreen() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const token = await AsyncStorage.getItem("token");
-        const { data } = await axios.get(`http://192.168.1.111:3000/api/admin/users`, {
+        const { data } = await axios.get(`http://${API_URL}/api/admin/users`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -108,6 +109,11 @@ export default function AdminUsersScreen() {
       <View style={{ flexDirection: "row", marginBottom: 5 }}>
         <Text style={{ marginRight: 10, fontWeight: "bold" }}>EMAIL:</Text>
         <Text style={{ flex: 1 }}>{item.email}</Text>
+      </View>
+
+      <View style={{ flexDirection: "row", marginBottom: 5 }}>
+        <Text style={{ marginRight: 10, fontWeight: "bold" }}>ADMIN:</Text>
+        <Text style={{ flex: 1 }}>{item.isAdmin ? "Yes" : "No"}</Text>
       </View>
       <TouchableOpacity
         style={{

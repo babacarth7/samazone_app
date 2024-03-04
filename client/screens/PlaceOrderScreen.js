@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, ScrollView, Image, Alert } from "react-na
 import { Store } from "../utils/Store";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
+import { API_URL } from "../utils/config";
 
 export default function PlaceOrderScreen() {
   const { state, dispatch } = useContext(Store);
@@ -33,7 +34,7 @@ export default function PlaceOrderScreen() {
         totalPrice,
       };
 
-      const response = await axios.post("http://192.168.1.111:3000/api/order", order);
+      const response = await axios.post(`http://${API_URL}/api/order`, order);
       console.log(JSON.stringify(response));
       console.log(JSON.stringify(order));
       const orderIdFromResponse = response.data._id;
@@ -89,7 +90,7 @@ export default function PlaceOrderScreen() {
             }}
           >
             <Image
-              source={{ uri: `http://192.168.1.111:3000/images/${item.image}` }}
+              source={{ uri: `http://${API_URL}/images/${item.image}` }}
               style={{ width: 80, height: 80, marginRight: 10 }}
             />
             <View style={{ flex: 1 }}>

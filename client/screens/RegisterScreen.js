@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
+import { API_URL } from "../utils/config";
 
 export default function RegisterScreen() {
   const [name, setName] = useState("");
@@ -19,7 +20,7 @@ export default function RegisterScreen() {
 
     // send a POST  request to the backend API to register the user
     axios
-      .post("http://192.168.1.111:3000/api/auth/register", user)
+      .post(`http://${API_URL}/api/auth/register`, user)
       .then((response) => {
         console.log(response);
         Alert.alert("Registration successful", "You have been registered Successfully");

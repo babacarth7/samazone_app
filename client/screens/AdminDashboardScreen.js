@@ -4,6 +4,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { API_URL } from "../utils/config";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -55,7 +56,7 @@ export default function AdminDashboardScreen() {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const token = await AsyncStorage.getItem("token");
-        const response = await axios.get(`http://192.168.1.111:3000/api/admin/summary`, {
+        const response = await axios.get(`http://${API_URL}/api/admin/summary`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

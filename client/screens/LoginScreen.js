@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, Alert, ActivityIndicator } fro
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { API_URL } from "../utils/config";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
@@ -33,7 +34,7 @@ export default function LoginScreen() {
         password: password,
       };
 
-      const response = await axios.post("http://192.168.1.111:3000/api/auth/login", user);
+      const response = await axios.post(`http://${API_URL}/api/auth/login`, user);
       const { token, isAdmin } = response.data;
 
       await AsyncStorage.setItem("token", token);

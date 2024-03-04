@@ -6,6 +6,7 @@ import { SliderBox } from "react-native-image-slider-box";
 import { FontAwesome5 } from "@expo/vector-icons";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { API_URL } from "../utils/config";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -17,7 +18,7 @@ export default function HomeScreen() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://192.168.1.111:3000/api/products");
+        const response = await axios.get(`http://${API_URL}/api/products`);
         console.log("Products:", JSON.stringify(response.data));
         setProducts(response.data);
       } catch (error) {

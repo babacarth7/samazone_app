@@ -4,13 +4,14 @@ import { useNavigation } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { API_URL } from "../utils/config";
 
 export default function ProfileScreen() {
   const navigation = useNavigation();
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://192.168.1.111:3000/api/auth/logout");
+      await axios.get(`http://${API_URL}/api/auth/logout`);
       Alert.alert("Logout successfully", "You can log in again");
       await AsyncStorage.removeItem("token");
       navigation.replace("Login");

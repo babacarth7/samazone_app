@@ -2,6 +2,7 @@ import React, { useEffect, useReducer, useState } from "react";
 import { View, Text, ScrollView, ActivityIndicator, Image, TouchableOpacity, Alert } from "react-native";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { API_URL } from "../utils/config";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -67,7 +68,7 @@ export default function OrderConfirmationScreen({ route }) {
     try {
       dispatch({ type: "FETCH_REQUEST" });
       const token = await AsyncStorage.getItem("token");
-      const { data } = await axios.get(`http://192.168.1.111:3000/api/order/${orderId}`, {
+      const { data } = await axios.get(`http://${API_URL}/api/order/${orderId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -85,7 +86,7 @@ export default function OrderConfirmationScreen({ route }) {
   const handlePay = async () => {
     try {
       dispatch({ type: "PAY_REQUEST" });
-      const { data } = await axios.put(`http://192.168.1.111:3000/api/order/${orderId}/pay`);
+      const { data } = await axios.put(`http://${API_URL}/api/order/${orderId}/pay`);
       dispatch({ type: "PAY_SUCCESS", payload: data });
       Alert.alert("Order(s) Paid", "order(s) paid successfully");
       await fetchOrder();
@@ -99,7 +100,7 @@ export default function OrderConfirmationScreen({ route }) {
   const handleDeliver = async () => {
     try {
       dispatch({ type: "DELIVER_REQUEST" });
-      const { data } = await axios.put(`http://192.168.1.111:3000/api/order/${orderId}/deliver`);
+      const { data } = await axios.put(`http://${API_URL}/api/order/${orderId}/deliver`);
       dispatch({ type: "DELIVER_SUCCESS", payload: data });
       Alert.alert("Order(s) Delivered", "order(s) delivered successfully");
       await fetchOrder();
@@ -187,7 +188,7 @@ export default function OrderConfirmationScreen({ route }) {
                 >
                   <Image
                     source={{
-                      uri: `http://192.168.1.111:3000/images/${item.image}`,
+                      uri: `http://${API_URL}/images/${item.image}`,
                     }}
                     style={{ width: 80, height: 80, marginRight: 10 }}
                   />
